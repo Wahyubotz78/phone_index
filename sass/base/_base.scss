@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  // 1 rem equals exactly 10 pixels (10px/16px = 62.5%)
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Comic Neue', cursive;
+}

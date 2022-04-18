@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;1,400&family=Overlock&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400&family=Lato:wght@300;400&family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+    <title>Phone Index</title>
+  </head>
+  <body>
+    <div class="index-large-image"></div>
+    <div class="overlay"></div>
+    <div class="logo">
+        <a href="index.html">Well-Versed</a> 
+        <!-- <div class="hamburger-categories-phone" onclick="overlay()">
+            <div class="line" id="lineOne"></div>
+            <div class="line" id="lineTwo"></div>
+            <div class="line" id="lineThree"></div>
+            <div class="line" id="lineFour"></div>     
+        </div>    -->
+    </div>
+    <div class="grid-container">
+      <a href="index.html" class="logo-laptop">Well-Versed</a> 
+      <div class="subheading">Bible and Verse Search</div>
+
+      <div class="search-group">
+          <div class="selected">NIV</div>
+          <div class="border-select-box">
+              <input class="search-input" id="search-input" type="text" placeholder="verse search" onfocus="showSearchButton()">
+          </div>
+          <div class="pulsating-circle">
+              <button class="btn-search" onclick="moveContainer()"></button>
+          </div>
+      </div>  
+
+      <div class="options-container">
+          <div class="option">
+              <input type="radio" class="radio" id="CSB" name="category">
+              <label for="CSB"><span class="bibleVersion">CSB</span> &nbsp &nbsp Christian Standard Bible</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="ESV" name="category">
+              <label for="ESV"><span class="bibleVersion">ESV</span> &nbsp &nbsp English Standard Version</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="KJV" name="category"> 
+              <label for="KJV"><span class="bibleVersion">KJV</span>  &nbsp &nbsp King James Version</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="MEV" name="category"> 
+              <label for="MEV"><span class="bibleVersion">MEV</span> &nbsp &nbsp Modern English Version</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="NASB" name="category"> 
+              <label for="NASB"><span class="bibleVersion">NASB</span>  &nbsp &nbsp New Amer Standard Bible</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="NIV" name="category">
+              <label for="NIV"><span class="bibleVersion">NIV</span> &nbsp &nbsp New International Version</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="NKJV" name="category"> 
+              <label for="NKJV"><span class="bibleVersion">NKJV</span> &nbsp &nbsp New King James Version</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="NLT" name="category"> 
+              <label for="NLT"><span class="bibleVersion">NLT</span> &nbsp &nbsp New Living Translation</label>
+          </div>
+          <div class="option">
+              <input type="radio" class="radio" id="NVI" name="category"> 
+              <label for="NVI"><span class="bibleVersion">NVI</span> &nbsp &nbsp Nueva Version Internacional</label>
+          </div>
+      </div> 
+  
+      <div class="verse-scroll-container">
+          <div class="verse-text"></div>
+          <svg class="btn-next-left btns-next" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26.87 52.87" xml:space="preserve" onclick="previousVerse()">
+                  <path class="btn-next-stroke-width" d="M.35 26.52L26.52.35"/>
+                  <path class="btn-next-stroke-width" d="M.35 26.52L26.52.35"/>
+                  <g>
+                      <path class="btn-next-stroke-width" d="M.35 26.35l26.17 26.17"/>
+                      <path class="btn-next-stroke-width" d="M.35 26.35l26.17 26.17"/>
+                  </g>
+              </svg>
+              <svg class="btn-next-right btns-next" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 26.87 52.87" xml:space="preserve" onclick="nextVerse()">
+                  <path class="btn-next-stroke-width" d="M.35 26.52L26.52.35"/>
+                  <path class="btn-next-stroke-width" d="M.35 26.52L26.52.35"/>
+                  <g>
+                      <path class="btn-next-stroke-width" d="M.35 26.35l26.17 26.17"/>
+                      <path class="btn-next-stroke-width" d="M.35 26.35l26.17 26.17"/>
+                  </g>
+              </svg>
+          </div>
+      </div>
+      
+  <!-- <footer class="footer-laptop">
+      <a href="about.html"><button class="about-padding">about</button></a>
+      <a href="categories.html"><button class="verse-search-padding">verse categories</button></a>         
+  </footer>   -->
+
+  <footer class="footer-phone">
+      <a href="about.html"><button class="about-padding">about</button></a>
+      <a href="categories.html"><button class="verse-search-padding">verse categories</button></a> 
+  </footer>  
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js"></script>
+    <!-- <script src="CustomEase.min.js"></script> -->
+    <script src="SplitText.min.js"></script>
+    <script src="javascript/script.js"></script>
+  </body>
+</html>
